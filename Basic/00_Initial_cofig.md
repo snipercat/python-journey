@@ -56,6 +56,7 @@ You'll know this was activated because you'll see (.venv) at the start of the co
 On root folder create a file called `.gitignore` and add these lines to avoid upload heavy or unnecessary files, you can add more files later
 
 ```
+.env
 .venv/
 __pycache__/
 *.pyc
@@ -98,3 +99,20 @@ git branch -M main
 # Push your code to GitHub
 git push -u origin main
 ```
+
+# Security Recommendations
+
+## Protect your Credentials
+
+ **Never upload `.env` files**: These files often contain passwords or API keys. Always ensure `.env` is listed in your `.gitignore`.
+
+**Token Safety**: The token stored by Git is local to your machine. If you use a public or shared PC, **always** sign out and clear the Git Credentials Manager using these commands.
+```bash
+git credential-manager clear
+git config --unset user.name
+git config --unset user.email
+```
+
+## GitHub Account Security
+**Enable 2FA**: Go to `Settings > Password and Authentication` and enable Two-Factor Authentication.
+**Review Sessions**: Periodically check `Settings > Sessions` to ensure only your trusted devices have access.
