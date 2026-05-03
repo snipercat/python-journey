@@ -37,6 +37,8 @@ on VS code select `File > Open folder` and select your folder.
 Open the terminal with `View > Terminal` (crl+ `) and run:
 
 `py -m venv .venv`
+or 
+`python -m venv .venv`
 
 This will create a folder called `.venv` where you'll store dependences and configuration
 
@@ -93,11 +95,11 @@ In your terminal, run the following commands:
 # Add the remote URL as 'origin'
 git remote add origin  https://github.com/your-user/your-repo.git
 
-# Rename your local branch to 'main' (if not already)
-git branch -M main
+# Rename your local branch to 'stable' (if not already)
+git branch -M stable
 
 # Push your code to GitHub
-git push -u origin main
+git push -u origin stable
 ```
 
 # Security Recommendations
